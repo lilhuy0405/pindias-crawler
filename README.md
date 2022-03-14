@@ -1,6 +1,6 @@
 # pindias crawler
 built with electron 
-# INSTALLL
+# INSTALL
 
 `$ npm install`
 

@@ -1,0 +1,22 @@
+{
+  "name": "pandias-crawler",
+  "productName": "pandias-crawler",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "main.js",
+  "version": "1.0.0",
+  "author": "luuhu",
+  "scripts": {
+    "start": "set NODE_ENV=development&&electron ."
+  },
+  "dependencies": {
+    "moment": "^2.29.1",
+    "puppeteer": "^13.5.1",
+    "toastify-js": "^1.11.2"
+  },
+  "devDependencies": {
+    "electron": "^18.0.0-alpha.5",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-reloader": "^1.2.3"
+  }
+}

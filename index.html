@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="public/images/favicon.png" type="image/x-icon">
+    <link href="styles.css" rel="stylesheet">
+    <title>Pindias Crawler</title>
+</head>
+<body>
+<div id="login">
+    <div class="login-container">
+        <h1 class="text-center login-title">Welcome to Pindias</h1>
+        <form id="login-form">
+            <div>
+                <input type="text" placeholder="Enter username" class="login-input" id="username">
+            </div>
+            <div id="username-error" class="form-error"></div>
+            <div>
+                <input type="password" placeholder="Enter password" class="login-input" id="password">
+            </div>
+            <div id="password-error" class="form-error"></div>
+            <div>
+                <button type="submit" id="login-btn">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="crawler">
+    <div class="crawler-wrapper">
+        <div class="navbar">
+            <div class="nav-item active">
+                Crawl Data
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="nav-item">
+                Crawled Data
+            </div>
+            <div class="nav-item">
+                Users
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="logo">
+                    <img src="public/images/logo.png" alt="" class="logo-img">
+                </div>
+            </div>
+            <h3>Crawl apartments Data <i class="fa-solid fa-robot"></i></h3>
+            <div class="crawler-configs">
+                <div>
+                    <label for="crawl-source">Crawl source: </label>
+                    <input type="text" disabled value="https://thechadcarrollgroup.com/sold/" id="crawl-source">
+                </div>
+                <div>
+                    <label for="crawl-size">Crawl size: </label>
+                    <input type="number" step="1" min="1" id="crawl-size" value="1">
+                </div>
+                <div>
+                    <label style="visibility: hidden">.</label>
+                    <button id="crawl-btn">
+                        Crawl ! <i class="fa-solid fa-robot" style="margin-left: 10px"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="crawler-loader">
+                <div id="crawl-message">
+                </div>
+                <div class="progressbar">
+                    <div id="myBar">
+                        <span></span>
+                        20%
+                    </div>
+                </div>
+            </div>
+            <div id="crawler-result">
+                <div class="save-all-btn-container">
+                    <button id="saveBtn" class="save-all-btn">Push All <i
+                            class="fa-solid fa-cloud-arrow-up"></i>
+                    </button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-scroll">
+                        <table id="crawler-table-data">
+                            <tr style="position: sticky; top: 0; z-index: 10; background: #dddddd;">
+                                <th><input type="checkbox" id="checkAll"></th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Price</th>
+                                <th>Area</th>
+                                <th>Bad - Beds</th>
+                                <th>Thumbnail</th>
+                                <th>Action</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>

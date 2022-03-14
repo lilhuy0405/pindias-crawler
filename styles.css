@@ -1,0 +1,328 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;500&family=Ubuntu+Mono&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#login {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('public/images/bg.png');
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+#crawler {
+    font-family: "Segoe UI", sans-serif;
+}
+.login-container {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+
+.login-input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    outline: none;
+    font-size: 16px;
+}
+
+.login-input:focus {
+    border-color: #111;
+    outline: none;
+}
+
+#login-btn {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #3d107b 0%, #6b0876 51%, #920071 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.login-title {
+    color: #fff;
+}
+
+.form-error {
+    color: red;
+}
+
+.crawler-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.navbar {
+    width: 20%;
+    height: 100vh;
+    /*background: #000C17;*/
+    background-image: url("public/images/bg.png");
+    background-position: center center;
+}
+
+.content {
+    width: 80%;
+    padding: 10px;
+}
+
+.nav-item {
+    text-align: center;
+    border-bottom: 1px solid #efefef;
+    padding: 10px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    background: rgba(0, 0, 0, .4);
+}
+
+.nav-item.active {
+    background: blueviolet;
+}
+
+#crawl-source, #crawl-size {
+    width: 300px;
+    height: 30px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#crawl-btn {
+    width: 120px;
+    outline: none;
+    border: none;
+    background-color: blueviolet;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crawler-configs {
+    width: 100%;
+    padding: 20px;
+    /*margin: 0 auto;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crawler-configs div {
+    margin: 0 10px;
+}
+
+.loader {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.table-wrapper {
+    position: relative;
+}
+
+.table-scroll {
+    height: calc(100vh - 280px);
+    overflow: auto;
+    margin-top: 20px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    overflow: auto;
+    height: 100px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#crawl-message {
+    padding: 5px;
+    max-height: calc(100vh - 280px);
+    overflow-y: auto;
+    font-family: 'Ubuntu Mono', monospace !important;
+    font-size: 16px;
+    margin-bottom: 25px;
+
+}
+
+.progressbar {
+    width: 100%;
+    height: 35px;
+    background: #555;
+    border-radius: 25px;
+    padding: 8px;
+
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+#myBar {
+    display: block;
+    height: 100%;
+    border-radius: 20px 8px 8px 20px;
+    background-color: rgb(43, 194, 83);
+    background-image: linear-gradient(
+            center bottom,
+            rgb(43, 194, 83) 37%,
+            rgb(84, 240, 84) 69%
+    );
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    width: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    transition: width .5s linear;
+    line-height: 19px;
+    font-size: 14px;
+}
+
+#myBar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%,
+            transparent
+    );
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    border-radius: 20px 8px 8px 20px;
+    overflow: hidden;
+}
+
+#myBar::after, .progressbar > span {
+    animation: move 2s linear infinite
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+#crawler-loader {
+    padding: 0 20px;
+    display: none;
+}
+
+#crawler-result {
+    display: none;
+}
+
+
+button#crawl-btn:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.logo {
+    width: 100%;
+    height: 40px;
+}
+
+.logo-img {
+    width: 160px;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+.push-btn {
+    padding: 5px 10px;
+    background: #F0A500;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.save-all-btn-container {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+}
+.save-all-btn {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: #F0A500;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
